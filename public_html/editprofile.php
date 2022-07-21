@@ -45,7 +45,20 @@
             <div class="content">
                 <h1 class="head1">Edit Profile</h1>
                         
-                        
+                 <form action="editprofile.php" method="POST">
+                            <div class="row">
+                                <div class="column left">
+                                    <input type="text" name="firstname" placeholder="Enter your firstname" class="text"><br>
+                                </div>
+                                <div class="column right">
+                                    <input type="text" name="lastname" placeholder="Enter your lastname" class="text"><br>
+                                </div>
+                            </div>
+                            <input type="text" name="username" placeholder="Enter username" class="text">
+                            <input type="password" name="password" placeholder="Enter password" class="text">
+                            <input type="submit" value="Save change" class="btn" name="edit" value="true"><br>
+                            
+                        </form>       
             </div>
         </section>
         <!-- edit profile section starts  -->
