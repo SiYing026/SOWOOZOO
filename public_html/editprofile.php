@@ -39,7 +39,6 @@
         </header>
         <!-- End header section -->
             
-
         <!-- editprofile form section -->
         <section class="signin" id="signin">
             <div class="content">
