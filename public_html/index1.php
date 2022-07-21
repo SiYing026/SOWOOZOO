@@ -20,7 +20,41 @@
     
     <body>
 
-        
+        <!-- header section -->
+        <header class="header">
+            
+            <a href="#home" class="logo"><img src="images/favicon.png" alt="">&nbsp;SOWOOZOO</a>
+
+            <nav class="navbar">
+                <div id="nav_close" class="fa fa-times" ></div>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#packages">Packages</a>
+                <a href="#clients">Review</a>
+                <a href="contactus.php">Contact</a>
+                <a href="signin.php">Sign-in</a>
+            </nav>
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+            </div>
+
+        </header>
+        <script>
+        //nav bar
+        let navbar = document.querySelector('.header .navbar');
+
+        document.querySelector('#menu-btn').onclick = () =>{
+            navbar.classList.add('active');
+        };
+
+        document.querySelector('#nav_close').onclick = () =>{
+            navbar.classList.remove('active');
+        };
+        </script>
+        <!-- End header section -->
+
 
         <!-- home section starts  -->
 
