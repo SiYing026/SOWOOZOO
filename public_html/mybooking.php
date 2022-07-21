@@ -44,7 +44,42 @@
         <section class="bookinghistory" id="bookinghistory">
             <div class="content">
                 <h1 class="head1">My Booking</h1>
-            
+                <?php
+                    ini_set('display_errors', 0);
+                    error_reporting(E_ERROR | E_WARNING | E_PARSE); 
+
+                    session_start();
+
+                    $dbc=mysqli_connect("localhost","root","");
+                    mysqli_select_db($dbc, "sowoozoo");
+
+                    $identifier=$_SESSION['identifier'];
+
+                    if(!empty($_SESSION['identifier'])){
+                        $query="SELECT * FROM booking WHERE email='".$_SESSION["identifier"]."' ";
+                        
+                        if($r = mysqli_query($dbc, $query ) ) {
+                            while ($row=mysqli_fetch_array($r)){
+                                print "<h3>{$row['name']}</h3>"
+                                . "<p><b>Package :</b> {$row['package']}<br>"
+                                . "<b>Phone number :</b> {$row['phone']}<br>"
+                                . "<b>Date :</b> {$row['date']}<br>"
+                                . "<b>Time :</b> {$row['time']}<br>"
+                                . "<b>Participants :</b> {$row['participants']}</p>
+                                <hr>";
+                            }
+                        } else{
+                                print'<p style="color:red;">Could not retrieve the data because :<br/>' .mysqli_error($dbc).
+                                '.</p><p>the query being run was : '.$query.'</p>';
+                        }
+                        mysqli_close($dbc);
+                    }
+                    else{
+                            echo"<p>Please <a href=\"signin.php\">Sign-in</a> first</p>";
+                    }
+                ?>
+
+
         </section>
         <!-- bookinghistory form section end -->
 
@@ -94,7 +129,36 @@
 
         <!-- footer section ends -->
 
-        
+        <script>
+            let navbar = document.querySelector('.header .navbar');
+
+            document.querySelector('#menu-btn').onclick = () => {
+                navbar.classList.add('active');
+            };
+
+            document.querySelector('#nav_close').onclick = () => {
+                navbar.classList.remove('active');
+            };
+
+            //send email
+            if(window.history.replaceState){
+              window.history.replaceState(null, null, window.location.href);
+            }
+            
+            //faqs
+            const buttons = document.querySelectorAll('button');
+
+            buttons.forEach( button =>{
+                button.addEventListener('click',()=>{
+                    const faq = button.nextElementSibling;
+                    const icon = button.children[1];
+
+                    faq.classList.toggle('show');
+                    icon.classList.toggle('rotate');
+                });
+            } );
+        </script>
+
 
     </body>
 </html>
