@@ -44,7 +44,123 @@
             <div class="content">
                 <h1 class="head1">Edit Profile</h1>
                         
+                 <form action="editprofile.php" method="POST">
+                    <?php
+                    ini_set('display_errors', 0);
+                    error_reporting(E_ERROR | E_WARNING | E_PARSE); 
+
+                    session_start();
+                    $identifier=$_SESSION['identifier'];
+
+                    if(!empty($_SESSION['identifier'])){
                         
+                        if (!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['firstname']) && !empty($_POST['lastname'])) {
+
+                        $username = $_POST['username'];
+                        $firstname = $_POST['firstname'];
+                        $lastname = $_POST['lastname'];
+                        $password = $_POST['password'];
+
+                        if (!is_numeric($_POST['username'])) {
+
+                            if (isset($_POST['password'])) {
+
+                                $number = preg_match('@[0-9]@', $password);
+                                $uppercase = preg_match('@[A-Z]@', $password);
+                                $lowercase = preg_match('@[a-z]@', $password);
+                                $specialChars = preg_match('@[^\w]@', $password);
+
+                                if (strlen($password) < 8 || !$number || !$uppercase || !$lowercase || !$specialChars) {
+                                    echo "<p style='color:red; font-size: 1.5rem;'><strong>Password must be at least 8 characters and contain at least 
+                                                                1 uppercase character, <br>1 lowercase character, 1 number and special character.</strong></p>";
+                                    $problem = TRUE;
+                                }
+                            }
+                        } else {
+                            echo "<p style='color:red; font-size: 1.5rem;'><strong>The username are NOT numeric. Please enter again.</strong></p>";
+                            $problem = TRUE;
+                        }
+                        
+                        echo'<input type="submit" name="payment" value="Go to profile" class="btn" onClick="myFunction()"/>';
+                            echo'<script>
+                                function myFunction() {
+                                    window.location.href="myaccount.php";
+                                }
+                            </script>';
+                            
+                    } else {
+                        echo "<p style='color:red; font-size: 1.5rem;'><strong>Please fill in the blank.</strong></p>";
+                        $problem = TRUE;
+                    }
+                    
+                        echo'
+                        <form action="editprofile.php" method="POST">
+                            <div class="row">
+                                <div class="column left">
+                                    <input type="text" name="firstname" placeholder="Enter your firstname" class="text"><br>
+                                </div>
+                                <div class="column right">
+                                    <input type="text" name="lastname" placeholder="Enter your lastname" class="text"><br>
+                                </div>
+                            </div>
+                            <input type="text" name="username" placeholder="Enter username" class="text">
+                            <input type="password" name="password" placeholder="Enter password" class="text">
+                            <input type="submit" value="Save change" class="btn" name="edit" value="true"><br>
+                            
+                        </form>
+                        ';
+                    }
+                    else{
+                            echo"<p>Please <a href=\"signin.php\">Sign-in</a> first</p>";
+                    }
+
+                    if(isset($_POST['edit'])){
+                        
+                            ini_set('display_errors', 0);
+                            error_reporting(E_ERROR | E_WARNING | E_PARSE); 
+                            
+                            $newUsername=$_POST['username'];
+                            $newPassword=$_POST['password'];
+                            $newFName=$_POST['firstname'];
+                            $newLName=$_POST['lastname'];
+
+                            $dbc=mysqli_connect("localhost","root","");
+                            mysqli_select_db($dbc, "sowoozoo");
+
+                            $query1="UPDATE user SET username ='$newUsername' WHERE email = '$identifier'";
+                            $query2="UPDATE user SET password ='$newPassword' WHERE email = '$identifier'";
+                            $query3="UPDATE user SET firstname ='$newFName' WHERE email = '$identifier'";
+                            $query4="UPDATE user SET lastname ='$newLName' WHERE email = '$identifier'";
+
+                            if(!empty($_POST['username'])){
+                                    mysqli_query($dbc,$query1);
+                                    echo"<br>Username updated<br>";
+                            }
+
+
+                            if(!empty($_POST['password'])){
+                                    mysqli_query($dbc,$query2);
+                                    echo"Password updated<br>";
+                            }
+                            
+                            if(!empty($_POST['firstname'])){
+                                    mysqli_query($dbc,$query3);
+                                    echo"First name updated<br>";
+                            }
+                            
+                            if(!empty($_POST['lastname'])){
+                                    mysqli_query($dbc,$query4);
+                                    echo"Last name updated<br>";
+                            }
+                            
+                            if(empty($_SESSION['identifier'])){
+                                    echo"Please log in first to edit your profile";
+                            }
+                    }
+                ?>
+
+                            
+                 </form>       
             </div>
         </section>
         <!-- edit profile section starts  -->
