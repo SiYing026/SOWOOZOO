@@ -210,6 +210,24 @@
 
     <!-- footer section ends -->
     
+    <script type="text/javascript">
+            //menu-bar
+            let navbar = document.querySelector('.header .navbar');
+
+            document.querySelector('#menu-btn').onclick = () =>{
+                navbar.classList.add('active');
+            };
+
+            document.querySelector('#nav_close').onclick = () =>{
+                navbar.classList.remove('active');
+            };
+        
+            //send email
+            if(window.history.replaceState){
+              window.history.replaceState(null, null, window.location.href);
+            }
+        </script>
+
     
     </body>
 </html>
