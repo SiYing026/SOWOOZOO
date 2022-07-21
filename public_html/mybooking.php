@@ -16,7 +16,29 @@
     </head>
 
     <body>
-       
+       <!-- header section -->
+        <header class="header">
+
+            <a href="index1.php" class="logo"><img src="images/favicon.png" alt="">&nbsp;SOWOOZOO</a>
+
+            <nav class="navbar">
+                <div id="nav_close" class="fa fa-times"></div>
+                <a href="index1.php">Home</a>
+                <a href="index1.php#about">About</a>
+                <a href="index1.php#gallery">Gallery</a>
+                <a href="index1.php#packages">Packages</a>
+                <a href="index1.php#clients">Review</a>
+                <a href="contactus.php">Contact</a>
+                <a href="signin.php">Sign-in</a>
+            </nav>
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+            </div>
+
+        </header>
+        <!-- End header section -->
+
 
         <!-- bookinghistory form section -->
         <section class="bookinghistory" id="bookinghistory">
