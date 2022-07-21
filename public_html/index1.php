@@ -752,6 +752,80 @@
   <!-- testimonial section ends -->
     
     
+<!--     contact section  -->
+
+    <section class="contact">
+
+        <div class="content">
+            <h1 class="heading">Contact Us</h1>
+            
+            <form action="index1.php#contact" method="POST">
+			
+            <?php
+                    use PHPMailer\PHPMailer\PHPMailer;
+
+                    require_once 'phpmailer/Exception.php';
+                    require_once 'phpmailer/PHPMailer.php';
+                    require_once 'phpmailer/SMTP.php';
+
+                    $mail = new PHPMailer(true);
+
+                    $alert = '';
+
+                    if(isset($_POST['submit'])){
+                        $name = $_POST['name'];
+                        $email = $_POST['email'];
+                        $subject = $_POST['subject'];
+                        $message = $_POST['message'];
+
+                        if (!empty($_POST['name']) && !empty($_POST['email']) & !empty($_POST['subject']) & !empty($_POST['message'])){
+
+                            try{
+                                $mail->isSMTP();
+                                $mail->Host = 'smtp.gmail.com';
+                                $mail->SMTPAuth = true;
+                                $mail->Username = 'siying060202@gmail.com'; // Gmail address which you want to use as SMTP server
+                                $mail->Password = 'tnuccpcuysckrzxl'; // Gmail address Password
+                                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                                $mail->Port = '587';
+
+                                $mail->setFrom('siying060202@gmail.com'); // Gmail address which you used as SMTP server
+                                $mail->addAddress('siying060202@gmail.com'); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
+
+                                $mail->isHTML(true);
+                                $mail->Subject = "SOWOOZOO : $subject";
+                                $mail->Body = "<h4>Name : $name <br>Email: $email </h4><h4><br>Message : </h4><p>$message</p>";
+
+                                $mail->send();
+                                echo "<p style='color:black; text-align: left;'><strong>Message Sent! Thank you for contacting us.</strong></p>";
+                                
+                            }catch (Exception $e){
+                                $alert = '<div class="alert-error">
+                                <span>'.$e->getMessage().'</span>
+                                </div>';
+                            }
+                        }
+                        else {
+                                echo "<p style='color:red; text-align: left;'><strong>Please fill in.</strong></p>";
+                        }
+                    }
+            ?>                
+                
+                <div class="row">
+                        <div class="column left">
+                           <input type="text" name="name" placeholder="Enter your name" id="" class="text"><br>
+                        </div>
+                        <div class="column right">
+                            <input type="email" name="email" placeholder="Enter your email address" id="" class="email"><br>
+                        </div>
+                    </div>
+                <input type="text" name="subject" placeholder="Enter a subject for your message" id="" class="text">
+                <textarea name="message" rows="10" cols="30" id="" class="textarea" placeholder="Write your message"></textarea>
+                <input type="submit" value="Send message" name="submit" class="btn">
+            </form>
+        </div>
+
+    </section>
 
 
 
