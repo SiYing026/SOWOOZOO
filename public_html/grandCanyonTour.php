@@ -155,7 +155,18 @@
                 <form action="grandCanyonTour.php" method="POST">
                     
             
-                    
+                    <div class="row">
+                        <div class="column left">
+                            <input type="text" name="name" placeholder="Enter your name" id="" class="text"><br>
+                        </div>
+                        <div class="column right">
+                            <input type="email" name="email" placeholder="Enter your email address" id="" class="email"><br>
+                        </div>
+                    </div>
+                    <input type="text" name="subject" placeholder="Enter a subject for your message" id="" class="text">
+                    <textarea name="message" rows="10" cols="30" id="" class="textarea" placeholder="Write your message"></textarea>
+                    <input type="submit" value="Send message" name="submit" class="btn" >
+
                 </form>
             </div>
         </section>
