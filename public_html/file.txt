@@ -1,0 +1,12 @@
+stdClass Object
+(
+    [username] => SY
+    [email] => siying060202@gmail.com
+    [password] => Siying#1245
+    [lastName] => kjoi
+    [firstName] => SiYing
+)
+stdClass Object
+(
+    [message] => User was created.
+)
