@@ -22,7 +22,16 @@
         <section class="bookinghistory" id="bookinghistory">
             <div class="content">
                 <h1 class="head1">My Booking</h1>
-            
+                <?php
+                    ini_set('display_errors', 0);
+                    error_reporting(E_ERROR | E_WARNING | E_PARSE); 
+
+                    session_start();
+
+                    $dbc=mysqli_connect("localhost","root","");
+                    mysqli_select_db($dbc, "sowoozoo");
+                ?>
+
         </section>
         <!-- bookinghistory form section end -->
 
