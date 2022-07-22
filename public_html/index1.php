@@ -55,6 +55,7 @@
         </script>
         <!-- End header section -->
 
+
         <!-- home section starts  -->
 
         <section class="home" id="home">
@@ -228,7 +229,7 @@
 
     <!-- about section ends -->
 
-    <!-- gallery section starts  -->
+   <!-- gallery section starts  -->
 
    <section class="gallery" id="gallery">
 
@@ -308,6 +309,7 @@
     </script>
     </section>
 <!-- gallery section ends -->
+
 
 <!-- packages section starts  -->
     <section class="packages" id="packages">
@@ -830,7 +832,6 @@
   <!-- testimonial section ends -->
     
     
-
 <!--     contact section  -->
 
     <section class="contact">
@@ -905,6 +906,8 @@
         </div>
 
     </section>
+
+
 
 <!--     footer section starts  -->
 

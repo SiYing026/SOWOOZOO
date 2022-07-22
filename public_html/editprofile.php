@@ -39,12 +39,13 @@
         </header>
         <!-- End header section -->
             
-
         <!-- editprofile form section -->
         <section class="signin" id="signin">
             <div class="content">
                 <h1 class="head1">Edit Profile</h1>
-                <?php
+                        
+                 <form action="editprofile.php" method="POST">
+                    <?php
                     ini_set('display_errors', 0);
                     error_reporting(E_ERROR | E_WARNING | E_PARSE); 
 
@@ -157,6 +158,9 @@
                             }
                     }
                 ?>
+
+                            
+                 </form>       
             </div>
         </section>
         <!-- edit profile section starts  -->

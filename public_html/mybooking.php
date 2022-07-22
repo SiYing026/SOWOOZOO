@@ -16,7 +16,7 @@
     </head>
 
     <body>
-        <!-- header section -->
+       <!-- header section -->
         <header class="header">
 
             <a href="index1.php" class="logo"><img src="images/favicon.png" alt="">&nbsp;SOWOOZOO</a>
@@ -44,7 +44,6 @@
         <section class="bookinghistory" id="bookinghistory">
             <div class="content">
                 <h1 class="head1">My Booking</h1>
-            
                 <?php
                     ini_set('display_errors', 0);
                     error_reporting(E_ERROR | E_WARNING | E_PARSE); 
@@ -79,6 +78,8 @@
                             echo"<p>Please <a href=\"signin.php\">Sign-in</a> first</p>";
                     }
                 ?>
+
+
         </section>
         <!-- bookinghistory form section end -->
 
@@ -157,6 +158,7 @@
                 });
             } );
         </script>
+
 
     </body>
 </html>

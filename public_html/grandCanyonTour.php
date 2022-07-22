@@ -153,7 +153,7 @@
             <div class="content">
                 <h1 class="heading">Contact Us</h1>
                 <form action="grandCanyonTour.php" method="POST">
-                    
+
             <?php
                     use PHPMailer\PHPMailer\PHPMailer;
 
@@ -203,6 +203,7 @@
                         }
                     } 
             ?>
+            
                     <div class="row">
                         <div class="column left">
                             <input type="text" name="name" placeholder="Enter your name" id="" class="text"><br>
@@ -214,6 +215,7 @@
                     <input type="text" name="subject" placeholder="Enter a subject for your message" id="" class="text">
                     <textarea name="message" rows="10" cols="30" id="" class="textarea" placeholder="Write your message"></textarea>
                     <input type="submit" value="Send message" name="submit" class="btn" >
+                    
                 </form>
             </div>
         </section>
@@ -268,7 +270,7 @@
 
     <!-- footer section ends -->
     
-        <script type="text/javascript">
+    <script type="text/javascript">
             //menu-bar
             let navbar = document.querySelector('.header .navbar');
 
@@ -285,6 +287,7 @@
               window.history.replaceState(null, null, window.location.href);
             }
         </script>
+
     
     </body>
 </html>
