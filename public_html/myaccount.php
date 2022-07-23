@@ -87,7 +87,7 @@
 
                     session_start();
 
-                    $dbc=mysqli_connect("localhost","root","");
+                    $dbc=mysqli_connect("localhost","root","Siyingdb*123");
                     mysqli_select_db($dbc, "sowoozoo");
 
                     $identifier=$_SESSION['identifier'];
