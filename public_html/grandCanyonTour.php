@@ -39,12 +39,11 @@
         </header>
         <!-- End header section -->
         
-        
         <!-- information section -->
         <section class="information" id="information">
             <h1 class="head1">
                 <?php
-                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                         $sql="SELECT name FROM packages WHERE id=1";
                         $result = mysqli_query($dbc,$sql);
                         while($row = mysqli_fetch_assoc($result)){
@@ -56,7 +55,7 @@
             
                 <video controls autoplay>
                     <?php
-                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT video FROM packages WHERE id=1";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -70,7 +69,7 @@
                 <div class="content">
                     <h3 class="head3">
                     <?php
-                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT price FROM packages WHERE id=1";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -81,7 +80,7 @@
                     </h3>
                     <h3>Overview</h3>
                     <?php
-                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT description FROM packages WHERE id=1";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -98,7 +97,7 @@
                             <h3>Tour Highlights</h3>
                             <span id="break">
                             <?php
-                                if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                     $sql="SELECT tourHighlights FROM packages WHERE id=1";
                                     $result = mysqli_query($dbc,$sql);
                                     while($row = mysqli_fetch_assoc($result)){
@@ -114,7 +113,7 @@
                             <h3>Tour Information</h3>
                             <span id="break">
                             <?php
-                                if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                     $sql="SELECT tourInfo FROM packages WHERE id=1";
                                     $result = mysqli_query($dbc,$sql);
                                     while($row = mysqli_fetch_assoc($result)){
@@ -129,7 +128,7 @@
                             <h3>Additional Information</h3>
                             <table>
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT addInfo FROM packages WHERE id=1";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
