@@ -310,7 +310,6 @@
     </section>
 <!-- gallery section ends -->
 
-
 <!-- packages section starts  -->
     <section class="packages" id="packages">
 
@@ -321,7 +320,7 @@
             <div class="box" >
                 <div class="image">
                     <?php
-			if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+			if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT image FROM packages WHERE id=1";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -333,7 +332,7 @@
                 <div class="content">
                     
                     <?php
-                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT name, description, price FROM packages WHERE id=1";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -353,7 +352,7 @@
             <div class="box">
                 <div class="image">
                     <?php
-			if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+			if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT image FROM packages WHERE id=2;";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -364,7 +363,7 @@
                 </div>
                 <div class="content">
                     <?php
-                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT name, description, price FROM packages WHERE id=2";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -384,7 +383,7 @@
             <div class="box">
                 <div class="image">
                     <?php
-			if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+			if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT image FROM packages WHERE id=3;";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -395,7 +394,7 @@
                 </div>
                 <div class="content">
                     <?php
-                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT name, description, price FROM packages WHERE id=3";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -415,7 +414,7 @@
             <div class="box">
                 <div class="image">
                     <?php
-			if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+			if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT image FROM packages WHERE id=4";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -426,7 +425,7 @@
                 </div>
                 <div class="content">
                    <?php
-                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT name, description, price FROM packages WHERE id=4";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -445,7 +444,7 @@
             <div class="box">
                 <div class="image">
                     <?php
-			if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+			if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT image FROM packages WHERE id=5";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -456,7 +455,7 @@
                 </div>
                 <div class="content">
                     <?php
-                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT name, description, price FROM packages WHERE id=5";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -476,7 +475,7 @@
             <div class="box">
                 <div class="image">
                     <?php
-			if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+			if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT image FROM packages WHERE id=6";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
@@ -487,7 +486,7 @@
                 </div>
                 <div class="content">
                      <?php
-                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                             $sql="SELECT name, description, price FROM packages WHERE id=6";
                             $result = mysqli_query($dbc,$sql);
                             while($row = mysqli_fetch_assoc($result)){
