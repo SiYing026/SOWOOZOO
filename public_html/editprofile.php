@@ -124,7 +124,7 @@
                             $newFName=$_POST['firstname'];
                             $newLName=$_POST['lastname'];
 
-                            $dbc=mysqli_connect("localhost","root","");
+                            $dbc=mysqli_connect("localhost","root","Siyingdb*123");
                             mysqli_select_db($dbc, "sowoozoo");
 
                             $query1="UPDATE user SET username ='$newUsername' WHERE email = '$identifier'";
