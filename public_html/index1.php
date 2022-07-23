@@ -170,13 +170,13 @@
 
     <!-- category section ends -->
 
-    <!-- about section starts  -->
+        <!-- about section starts  -->
 
     <section class="about" id="about">
 
         <div class="image">
             <?php
-                if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                     $sql="SELECT image FROM about WHERE id=1";
                     $result = mysqli_query($dbc,$sql);
                     while($row = mysqli_fetch_assoc($result)){
@@ -188,7 +188,7 @@
 
         <div class="content">
             <?php
-                if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                     $sql="SELECT title, content FROM about WHERE id=1";
                     $result = mysqli_query($dbc,$sql);
                     while($row = mysqli_fetch_assoc($result)){
@@ -201,7 +201,7 @@
         
         <div class="content">
             <?php
-                if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                     $sql="SELECT title, content FROM about WHERE id=2";
                     $result = mysqli_query($dbc,$sql);
                     while($row = mysqli_fetch_assoc($result)){
@@ -215,7 +215,7 @@
         
         <div class="image">
             <?php
-                if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                     $sql="SELECT image FROM about WHERE id=2";
                     $result = mysqli_query($dbc,$sql);
                     while($row = mysqli_fetch_assoc($result)){
@@ -513,7 +513,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    
 <section class="clients" id="clients">
     <div class="container">
         <div class="section-title">
@@ -529,7 +528,7 @@
                         <div class="testi-item">
                             <div class="testi-avatar">
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT image FROM reviews WHERE id=1";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
@@ -548,7 +547,7 @@
                                 </div>
                                 
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT comments FROM reviews WHERE id=1";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
@@ -560,7 +559,7 @@
                                 
                                 <div class="testimonials-avatar">
                                     <?php
-                                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                             $sql="SELECT name, position FROM reviews WHERE id=1";
                                             $result = mysqli_query($dbc,$sql);
                                             while($row = mysqli_fetch_assoc($result)){
@@ -579,7 +578,7 @@
                         <div class="testi-item">
                             <div class="testi-avatar">
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT image FROM reviews WHERE id=2";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
@@ -597,7 +596,7 @@
                                     <i class="fa fa-star-o"></i>
                                 </div>
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT comments FROM reviews WHERE id=2";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
@@ -608,7 +607,7 @@
                                 ?>
                                <div class="testimonials-avatar">
                                     <?php
-                                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                             $sql="SELECT name, position FROM reviews WHERE id=2";
                                             $result = mysqli_query($dbc,$sql);
                                             while($row = mysqli_fetch_assoc($result)){
@@ -627,7 +626,7 @@
                         <div class="testi-item">
                             <div class="testi-avatar">
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT image FROM reviews WHERE id=3";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
@@ -645,7 +644,7 @@
                                     <i class="fa fa-star-o"></i>
                                 </div>
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT comments FROM reviews WHERE id=3";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
@@ -656,7 +655,7 @@
                                 ?>
                                 <div class="testimonials-avatar">
                                     <?php
-                                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                             $sql="SELECT name, position FROM reviews WHERE id=3";
                                             $result = mysqli_query($dbc,$sql);
                                             while($row = mysqli_fetch_assoc($result)){
@@ -675,7 +674,7 @@
                         <div class="testi-item">
                             <div class="testi-avatar">
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT image FROM reviews WHERE id=4";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
@@ -693,7 +692,7 @@
                                     <i class="fa fa-star-o"></i>
                                 </div>
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT comments FROM reviews WHERE id=4";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
@@ -704,7 +703,7 @@
                                 ?>
                                 <div class="testimonials-avatar">
                                     <?php
-                                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                             $sql="SELECT name, position FROM reviews WHERE id=4";
                                             $result = mysqli_query($dbc,$sql);
                                             while($row = mysqli_fetch_assoc($result)){
@@ -723,7 +722,7 @@
                         <div class="testi-item">
                             <div class="testi-avatar">
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT image FROM reviews WHERE id=5";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
@@ -741,7 +740,7 @@
                                     <i class="fa fa-star-o"></i>
                                 </div>
                                 <?php
-                                    if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                    if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                         $sql="SELECT comments FROM reviews WHERE id=5";
                                         $result = mysqli_query($dbc,$sql);
                                         while($row = mysqli_fetch_assoc($result)){
@@ -751,7 +750,7 @@
                                 ?>
                                 <div class="testimonials-avatar">
                                     <?php
-                                        if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                                        if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                                             $sql="SELECT name, position FROM reviews WHERE id=5";
                                             $result = mysqli_query($dbc,$sql);
                                             while($row = mysqli_fetch_assoc($result)){
@@ -773,6 +772,7 @@
 
     </div>
 </section>
+    
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
   <script>
