@@ -170,13 +170,13 @@
 
     <!-- category section ends -->
 
-    <!-- about section starts  -->
+        <!-- about section starts  -->
 
     <section class="about" id="about">
 
         <div class="image">
             <?php
-                if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                     $sql="SELECT image FROM about WHERE id=1";
                     $result = mysqli_query($dbc,$sql);
                     while($row = mysqli_fetch_assoc($result)){
@@ -188,7 +188,7 @@
 
         <div class="content">
             <?php
-                if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                     $sql="SELECT title, content FROM about WHERE id=1";
                     $result = mysqli_query($dbc,$sql);
                     while($row = mysqli_fetch_assoc($result)){
@@ -201,7 +201,7 @@
         
         <div class="content">
             <?php
-                if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                     $sql="SELECT title, content FROM about WHERE id=2";
                     $result = mysqli_query($dbc,$sql);
                     while($row = mysqli_fetch_assoc($result)){
@@ -215,7 +215,7 @@
         
         <div class="image">
             <?php
-                if ($dbc = mysqli_connect('localhost','root','','sowoozoo')){
+                if ($dbc = mysqli_connect('localhost','root','Siyingdb*123','sowoozoo')){
                     $sql="SELECT image FROM about WHERE id=2";
                     $result = mysqli_query($dbc,$sql);
                     while($row = mysqli_fetch_assoc($result)){
