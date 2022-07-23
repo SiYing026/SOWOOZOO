@@ -47,7 +47,7 @@
                 
                 <?php
                     if (isset($_POST['signin'])) {
-                        $dbc = mysqli_connect("localhost","root","");
+                        $dbc = mysqli_connect("localhost","root","Siyingdb*123");
                         mysqli_select_db($dbc, "sowoozoo");
 
                         if (!empty($_POST['email']) && !empty($_POST['password'])){
